@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
     flake-utils.url = "github:numtide/flake-utils";
-    neovim.url = "github:neovim/neovim/nightly?dir=contrib";
+    neovim.url = "github:neovim/neovim?dir=contrib";
 
     barbar-nvim = { url = "github:romgrk/barbar.nvim"; flake = false; };
     base16-vim = { url = "github:chriskempson/base16-vim"; flake = false; };
