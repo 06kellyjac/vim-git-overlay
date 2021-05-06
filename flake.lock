@@ -117,11 +117,11 @@
       },
       "locked": {
         "dir": "contrib",
-        "lastModified": 1620191083,
-        "narHash": "sha256-6ex6mw9TlE6przv5Jzk2BFe58dDj7z1RdQLG59ICYP0=",
+        "lastModified": 1620233717,
+        "narHash": "sha256-1rZUlGrBuSe1e+RACVkuWWDkvOcVGXpO02RnkOiiZcE=",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "1c2e504d5c394182d898dd161b9d9f75e1252b96",
+        "rev": "8a93d1028f38c77d7ad8b4ad0a93dc11a5cbe85d",
         "type": "github"
       },
       "original": {
@@ -150,11 +150,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1620173122,
-        "narHash": "sha256-w3HUvU9IC2TWzwCHSd9HnajAEm97XeHE39V0jOHcNgs=",
+        "lastModified": 1620243660,
+        "narHash": "sha256-bsdpknqK7Rpw9t17EqT3slfnyVpf1RVMu2WNsfchZtw=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "77e969952ec4759ceaf3a231dd1b1113c6291976",
+        "rev": "c5173fe20851def75a5676a69a0d09b9d24ae428",
         "type": "github"
       },
       "original": {
@@ -215,11 +215,11 @@
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1620154596,
-        "narHash": "sha256-tDexPIYx+pcxNkQwXmzb0rWnMRvDo61SfTn7cYMUtPY=",
+        "lastModified": 1620286245,
+        "narHash": "sha256-ojtH4fSw7049ejn33ygyEmw/51VTkErwoLlNWC1Ifwc=",
         "owner": "neovim",
         "repo": "nvim-lspconfig",
-        "rev": "746864bec9bae3136d59ab4b7a6188fc950b6e9a",
+        "rev": "e6d61cfb8ea54a29b62b878dac08dd70f9f4bf42",
         "type": "github"
       },
       "original": {
@@ -328,7 +328,8 @@
         "plenary-nvim": "plenary-nvim",
         "popup-nvim": "popup-nvim",
         "telescope-frecency-nvim": "telescope-frecency-nvim",
-        "telescope-media-files-nvim": "telescope-media-files-nvim"
+        "telescope-media-files-nvim": "telescope-media-files-nvim",
+        "which-key-nvim": "which-key-nvim"
       }
     },
     "telescope-frecency-nvim": {
@@ -360,6 +361,22 @@
       "original": {
         "owner": "nvim-telescope",
         "repo": "telescope-media-files.nvim",
+        "type": "github"
+      }
+    },
+    "which-key-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1620213887,
+        "narHash": "sha256-CfaSoFgxbTslYay37kfj4dbc7Pl2Y8OxZranCVrcUc8=",
+        "owner": "folke",
+        "repo": "which-key.nvim",
+        "rev": "167661151204ea7da2d365113a76ab223b3dc880",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "which-key.nvim",
         "type": "github"
       }
     }

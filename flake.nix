@@ -22,6 +22,7 @@
     popup-nvim = { url = "github:nvim-lua/popup.nvim"; flake = false; };
     telescope-frecency-nvim = { url = "github:nvim-telescope/telescope-frecency.nvim"; flake = false; };
     telescope-media-files-nvim = { url = "github:nvim-telescope/telescope-media-files.nvim"; flake = false; };
+    which-key-nvim = { url = "github:folke/which-key.nvim"; flake = false; };
   };
 
   outputs = { self, nixpkgs, neovim, flake-utils, flake-compat, ... }@inputs: {
@@ -67,7 +68,8 @@
               plenary-nvim
               popup-nvim
               telescope-frecency-nvim
-              telescope-media-files-nvim;
+              telescope-media-files-nvim
+              which-key-nvim;
           });
       } //
       flake-utils.lib.eachDefaultSystem (system:
