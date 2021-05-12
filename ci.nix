@@ -52,6 +52,7 @@ rec {
     popup-nvim
     telescope-frecency-nvim
     telescope-media-files-nvim
+    which-key-nvim
   ];
 
   buildOutputs = concatMap outputsOf buildPkgs;
