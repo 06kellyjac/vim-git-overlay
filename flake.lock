@@ -3,11 +3,11 @@
     "barbar-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1620675528,
-        "narHash": "sha256-IxPoitruoWnM0B9+5BKX7bHkpvRV9d9bcxJm++2B4QI=",
+        "lastModified": 1620745017,
+        "narHash": "sha256-HPjj1baLgHIER4yciV81uSvxzKJmSt+f2s9GEMdxq2o=",
         "owner": "romgrk",
         "repo": "barbar.nvim",
-        "rev": "1e7347964ceab49c5ed7e1224de328cdd8b90919",
+        "rev": "78ab34de8c77e2e230502945bd4d156af5d54ab8",
         "type": "github"
       },
       "original": {
@@ -150,11 +150,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1620756440,
-        "narHash": "sha256-vP/+UaFoLFr9xmwC4mWCPg0ErOJNtBAm8jXnG6McEC8=",
+        "lastModified": 1620838695,
+        "narHash": "sha256-Eb3xr6aWt3lF8BgmZCgVJXy/ArmudeJXONGSqaSLfP0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "c9494b6fe0422c358fbe8eddc907919140381de3",
+        "rev": "acd49fab8ece11a89ef8ee49903e1cd7bb50f4b7",
         "type": "github"
       },
       "original": {
@@ -367,11 +367,11 @@
     "which-key-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1620722552,
-        "narHash": "sha256-O6JwdQ0B1IB/4lIm6TrGVSZaFK9bSK7waPKFcKZHP+w=",
+        "lastModified": 1620893058,
+        "narHash": "sha256-bKn0Vw6RcSiKd57V/OgGAvSisfdqePDvcTSn9ELCL+g=",
         "owner": "folke",
         "repo": "which-key.nvim",
-        "rev": "342c8cdb3651967c96c356eb2d79561c0c9273ee",
+        "rev": "95ae9d2d00e8714379e64994e69ae17fc540a7d6",
         "type": "github"
       },
       "original": {
