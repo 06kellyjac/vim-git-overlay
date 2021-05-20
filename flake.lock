@@ -113,7 +113,9 @@
     "neovim": {
       "inputs": {
         "flake-utils": "flake-utils_2",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "dir": "contrib",
@@ -133,22 +135,6 @@
       }
     },
     "nixpkgs": {
-      "locked": {
-        "lastModified": 1613226215,
-        "narHash": "sha256-3rA5cGIrBHD6yeKhNhsF7/t461ww25oJY8KyBb0IhjU=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "ff96a0fa5635770390b184ae74debea75c3fd534",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
       "locked": {
         "lastModified": 1621420722,
         "narHash": "sha256-dVnq/0eaN6HaAbgxgK6muSy0t2fD/Ayss2WUfvkJ5qs=",
@@ -317,7 +303,7 @@
         "galaxyline-nvim": "galaxyline-nvim",
         "lspsaga-nvim": "lspsaga-nvim",
         "neovim": "neovim",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "nvcode-color-schemes-vim": "nvcode-color-schemes-vim",
         "nvim-colorizer-lua": "nvim-colorizer-lua",
         "nvim-compe": "nvim-compe",
@@ -329,6 +315,28 @@
         "popup-nvim": "popup-nvim",
         "telescope-frecency-nvim": "telescope-frecency-nvim",
         "telescope-media-files-nvim": "telescope-media-files-nvim",
+        "tree-sitter-bash": "tree-sitter-bash",
+        "tree-sitter-bibtex": "tree-sitter-bibtex",
+        "tree-sitter-c": "tree-sitter-c",
+        "tree-sitter-comment": "tree-sitter-comment",
+        "tree-sitter-css": "tree-sitter-css",
+        "tree-sitter-dockerfile": "tree-sitter-dockerfile",
+        "tree-sitter-go": "tree-sitter-go",
+        "tree-sitter-gomod": "tree-sitter-gomod",
+        "tree-sitter-html": "tree-sitter-html",
+        "tree-sitter-javascript": "tree-sitter-javascript",
+        "tree-sitter-json": "tree-sitter-json",
+        "tree-sitter-latex": "tree-sitter-latex",
+        "tree-sitter-lua": "tree-sitter-lua",
+        "tree-sitter-nix": "tree-sitter-nix",
+        "tree-sitter-python": "tree-sitter-python",
+        "tree-sitter-query": "tree-sitter-query",
+        "tree-sitter-rust": "tree-sitter-rust",
+        "tree-sitter-teal": "tree-sitter-teal",
+        "tree-sitter-toml": "tree-sitter-toml",
+        "tree-sitter-tsx": "tree-sitter-tsx",
+        "tree-sitter-typescript": "tree-sitter-typescript",
+        "tree-sitter-yaml": "tree-sitter-yaml",
         "which-key-nvim": "which-key-nvim"
       }
     },
@@ -361,6 +369,380 @@
       "original": {
         "owner": "nvim-telescope",
         "repo": "telescope-media-files.nvim",
+        "type": "github"
+      }
+    },
+    "tree-sitter-bash": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1620491353,
+        "narHash": "sha256-W/P5M0/8CtLlilz/a9b57uBjumJuGTn/waSYAWjtGm0=",
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-bash",
+        "rev": "7776f24dfa35826fd3038c54a9c311b9e263c22c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-bash",
+        "rev": "7776f24dfa35826fd3038c54a9c311b9e263c22c",
+        "type": "github"
+      }
+    },
+    "tree-sitter-bibtex": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1616770430,
+        "narHash": "sha256-wgduSxlpbJy/ITenBLfj5lhziUM1BApX6MjXhWcb7lQ=",
+        "owner": "latex-lsp",
+        "repo": "tree-sitter-bibtex",
+        "rev": "ccfd77db0ed799b6c22c214fe9d2937f47bc8b34",
+        "type": "github"
+      },
+      "original": {
+        "owner": "latex-lsp",
+        "repo": "tree-sitter-bibtex",
+        "rev": "ccfd77db0ed799b6c22c214fe9d2937f47bc8b34",
+        "type": "github"
+      }
+    },
+    "tree-sitter-c": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1616947930,
+        "narHash": "sha256-LsLhCKUfB6uccQ4mBRXxsw7+dDnQmJht0yFGrF6tOuY=",
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-c",
+        "rev": "f05e279aedde06a25801c3f2b2cc8ac17fac52ae",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-c",
+        "rev": "f05e279aedde06a25801c3f2b2cc8ac17fac52ae",
+        "type": "github"
+      }
+    },
+    "tree-sitter-comment": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1619555148,
+        "narHash": "sha256-D4fdjAZ18BPT0LDS5uybMqDG8nEod/buMJKazf73yu0=",
+        "owner": "stsewd",
+        "repo": "tree-sitter-comment",
+        "rev": "894b61d68a31d93c33ed48dcc7f427174b440abe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "stsewd",
+        "repo": "tree-sitter-comment",
+        "rev": "894b61d68a31d93c33ed48dcc7f427174b440abe",
+        "type": "github"
+      }
+    },
+    "tree-sitter-css": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1614900323,
+        "narHash": "sha256-jfsLkwvbmt88TmGDejMR4exF5z9zQeXHcHUEuJy2IHk=",
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-css",
+        "rev": "94e10230939e702b4fa3fa2cb5c3bc7173b95d07",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-css",
+        "rev": "94e10230939e702b4fa3fa2cb5c3bc7173b95d07",
+        "type": "github"
+      }
+    },
+    "tree-sitter-dockerfile": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1620784890,
+        "narHash": "sha256-mWOgRJi3DEh7sMulhFLsqDn2P2x/04RsNkeXW7P5vkY=",
+        "owner": "camdencheek",
+        "repo": "tree-sitter-dockerfile",
+        "rev": "b25f86c3b2ec4192d040432a1a279861df390762",
+        "type": "github"
+      },
+      "original": {
+        "owner": "camdencheek",
+        "repo": "tree-sitter-dockerfile",
+        "rev": "b25f86c3b2ec4192d040432a1a279861df390762",
+        "type": "github"
+      }
+    },
+    "tree-sitter-go": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1620162196,
+        "narHash": "sha256-7LD8wR4Gg4OadYaXTSbGPe5iAOagRPGJSpO51uW0ow8=",
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-go",
+        "rev": "eb306e6e60f393df346cfc8cbfaf52667a37128a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-go",
+        "rev": "eb306e6e60f393df346cfc8cbfaf52667a37128a",
+        "type": "github"
+      }
+    },
+    "tree-sitter-gomod": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1620787338,
+        "narHash": "sha256-hwsCRm3Tsbyt9d6aTVicBklDPoyKVGKzWOSSSccMNfw=",
+        "owner": "camdencheek",
+        "repo": "tree-sitter-go-mod",
+        "rev": "2dfd6b7d3a4cfedc52e5eaa3cc497f419e628ebb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "camdencheek",
+        "repo": "tree-sitter-go-mod",
+        "rev": "2dfd6b7d3a4cfedc52e5eaa3cc497f419e628ebb",
+        "type": "github"
+      }
+    },
+    "tree-sitter-html": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1614895878,
+        "narHash": "sha256-vqtB32K+9pVV7FHEwbC2eNMHOlFgh9DRMjmu49na58E=",
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-html",
+        "rev": "d93af487cc75120c89257195e6be46c999c6ba18",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-html",
+        "rev": "d93af487cc75120c89257195e6be46c999c6ba18",
+        "type": "github"
+      }
+    },
+    "tree-sitter-javascript": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1620751892,
+        "narHash": "sha256-6MSgw5UF2GCId0Za60iNTebtqqIOIrBADNpcT3ishtc=",
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-javascript",
+        "rev": "6c8cfae935f67dd9e3a33982e5e06be0ece6399a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-javascript",
+        "rev": "6c8cfae935f67dd9e3a33982e5e06be0ece6399a",
+        "type": "github"
+      }
+    },
+    "tree-sitter-json": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1615325111,
+        "narHash": "sha256-F4rgtAVGBEYtUHnhKY0r0MoXnrXYNGIgTjRHqapz5I4=",
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-json",
+        "rev": "65bceef69c3b0f24c0b19ce67d79f57c96e90fcb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-json",
+        "rev": "65bceef69c3b0f24c0b19ce67d79f57c96e90fcb",
+        "type": "github"
+      }
+    },
+    "tree-sitter-latex": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1620743753,
+        "narHash": "sha256-1QQNvxsu9MYW6xC9fXOUATnY/R1Rs/fWIEZ/NvaqTpI=",
+        "owner": "latex-lsp",
+        "repo": "tree-sitter-latex",
+        "rev": "7f720661de5316c0f8fee956526d4002fa1086d8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "latex-lsp",
+        "repo": "tree-sitter-latex",
+        "rev": "7f720661de5316c0f8fee956526d4002fa1086d8",
+        "type": "github"
+      }
+    },
+    "tree-sitter-lua": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1614952553,
+        "narHash": "sha256-uhKpG1sWMZbN4hIT3d+l7bmOwyaammf72Zi6i0UNbp4=",
+        "owner": "nvim-treesitter",
+        "repo": "tree-sitter-lua",
+        "rev": "b6d4e9e10ccb7b3afb45018fbc391b4439306b23",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-treesitter",
+        "repo": "tree-sitter-lua",
+        "rev": "b6d4e9e10ccb7b3afb45018fbc391b4439306b23",
+        "type": "github"
+      }
+    },
+    "tree-sitter-nix": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1619562111,
+        "narHash": "sha256-bSwowUMzxd+jSt6SXS5hq188KTeLZQ2HEDv1s9Jy8YU=",
+        "owner": "cstrahan",
+        "repo": "tree-sitter-nix",
+        "rev": "50f38ceab667f9d482640edfee803d74f4edeba5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cstrahan",
+        "repo": "tree-sitter-nix",
+        "rev": "50f38ceab667f9d482640edfee803d74f4edeba5",
+        "type": "github"
+      }
+    },
+    "tree-sitter-python": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1616863313,
+        "narHash": "sha256-EzZjuOhaXYNs4rIRoG3y1rzy4C1SpdxYE0ThTWK/dJw=",
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-python",
+        "rev": "d6210ceab11e8d812d4ab59c07c81458ec6e5184",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-python",
+        "rev": "d6210ceab11e8d812d4ab59c07c81458ec6e5184",
+        "type": "github"
+      }
+    },
+    "tree-sitter-query": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1618092455,
+        "narHash": "sha256-VW1UTgqzDD8NWvliNwDI6IMls+/TLURnrvSBdtZuUDM=",
+        "owner": "nvim-treesitter",
+        "repo": "tree-sitter-query",
+        "rev": "bc753fa4d8349bd6280f634f57bd6e7be9a3ed17",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-treesitter",
+        "repo": "tree-sitter-query",
+        "rev": "bc753fa4d8349bd6280f634f57bd6e7be9a3ed17",
+        "type": "github"
+      }
+    },
+    "tree-sitter-rust": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1616863822,
+        "narHash": "sha256-v0MxQgim3N5UjQCTNDLY8brsy6NKtQ9L4gUWzof6yk4=",
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-rust",
+        "rev": "a360da0a29a19c281d08295a35ecd0544d2da211",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-rust",
+        "rev": "a360da0a29a19c281d08295a35ecd0544d2da211",
+        "type": "github"
+      }
+    },
+    "tree-sitter-teal": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1616189073,
+        "narHash": "sha256-iej+FyR7gTYWqjzaBTQjsc7DP4LWCOBVIXqFnO0paZ4=",
+        "owner": "euclidianAce",
+        "repo": "tree-sitter-teal",
+        "rev": "1f9562185ef09863a3eee5f5f1ed2858b94c8cda",
+        "type": "github"
+      },
+      "original": {
+        "owner": "euclidianAce",
+        "repo": "tree-sitter-teal",
+        "rev": "1f9562185ef09863a3eee5f5f1ed2858b94c8cda",
+        "type": "github"
+      }
+    },
+    "tree-sitter-toml": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1620708452,
+        "narHash": "sha256-z9MWNOBxLHBd/pVs5/QiSSGtaW+DUd7y3wZXcl3hWnk=",
+        "owner": "ikatyang",
+        "repo": "tree-sitter-toml",
+        "rev": "8bd2056818b21860e3d756b5a58c4f6e05fb744e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ikatyang",
+        "repo": "tree-sitter-toml",
+        "rev": "8bd2056818b21860e3d756b5a58c4f6e05fb744e",
+        "type": "github"
+      }
+    },
+    "tree-sitter-tsx": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1620162270,
+        "narHash": "sha256-EPeHWywC9tnN/ubwS9vpc/AnuYoIl/AB/tdDiAwsvjc=",
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-typescript",
+        "rev": "28e757a2f498486931b3cb13a100a1bcc9261456",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-typescript",
+        "rev": "28e757a2f498486931b3cb13a100a1bcc9261456",
+        "type": "github"
+      }
+    },
+    "tree-sitter-typescript": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1620162270,
+        "narHash": "sha256-EPeHWywC9tnN/ubwS9vpc/AnuYoIl/AB/tdDiAwsvjc=",
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-typescript",
+        "rev": "28e757a2f498486931b3cb13a100a1bcc9261456",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tree-sitter",
+        "repo": "tree-sitter-typescript",
+        "rev": "28e757a2f498486931b3cb13a100a1bcc9261456",
+        "type": "github"
+      }
+    },
+    "tree-sitter-yaml": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1620708444,
+        "narHash": "sha256-bpiT3FraOZhJaoiFWAoVJX1O+plnIi8aXOW2LwyU23M=",
+        "owner": "ikatyang",
+        "repo": "tree-sitter-yaml",
+        "rev": "0e36bed171768908f331ff7dff9d956bae016efb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ikatyang",
+        "repo": "tree-sitter-yaml",
+        "rev": "0e36bed171768908f331ff7dff9d956bae016efb",
         "type": "github"
       }
     },
