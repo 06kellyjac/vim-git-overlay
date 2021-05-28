@@ -10,7 +10,7 @@
 
     tree-sitter-bash = { url = "github:tree-sitter/tree-sitter-bash?rev=7776f24dfa35826fd3038c54a9c311b9e263c22c"; flake = false; };
     tree-sitter-bibtex = { url = "github:latex-lsp/tree-sitter-bibtex?rev=ccfd77db0ed799b6c22c214fe9d2937f47bc8b34"; flake = false; };
-    tree-sitter-c = { url = "github:tree-sitter/tree-sitter-c?rev=f05e279aedde06a25801c3f2b2cc8ac17fac52ae"; flake = false; };
+    tree-sitter-c = { url = "github:tree-sitter/tree-sitter-c?rev=008008e30a81849fca0c79291e2b480855e0e02c"; flake = false; };
     tree-sitter-comment = { url = "github:stsewd/tree-sitter-comment?rev=894b61d68a31d93c33ed48dcc7f427174b440abe"; flake = false; };
     tree-sitter-css = { url = "github:tree-sitter/tree-sitter-css?rev=94e10230939e702b4fa3fa2cb5c3bc7173b95d07"; flake = false; };
     tree-sitter-dockerfile = { url = "github:camdencheek/tree-sitter-dockerfile?rev=b25f86c3b2ec4192d040432a1a279861df390762"; flake = false; };
