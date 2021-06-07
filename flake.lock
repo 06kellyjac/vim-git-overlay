@@ -119,11 +119,11 @@
       },
       "locked": {
         "dir": "contrib",
-        "lastModified": 1622951124,
-        "narHash": "sha256-UbAiCtoQ1T+Uv3p6Nf3ORd4BS/3g8biQyLi3uO9pBXI=",
+        "lastModified": 1623003007,
+        "narHash": "sha256-nTf/oG5HY0E2y9NqPLx8sam1addka0KHd2YHlbrmb2M=",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "b3e3ab0567a1a3c2f97de943ef9d7b24c0008979",
+        "rev": "f2906a4669a2eef6d7bf86a29648793d63c98949",
         "type": "github"
       },
       "original": {
@@ -136,11 +136,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1622894392,
-        "narHash": "sha256-ZkLAXbrU0W2ORMKz2sAc+1LpFElUwhi0yZ3xe7ohKrs=",
+        "lastModified": 1622972307,
+        "narHash": "sha256-ENOu0FPCf95iLLoq2txhJtnA2ZpOFhIVBqQVbKM8ra0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "141b2b111d7aa5f8132edd0fc4f78fb2c2402ebb",
+        "rev": "d8eb97e3801bde96491535f40483d550b57605b9",
         "type": "github"
       },
       "original": {
@@ -233,11 +233,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1622843786,
-        "narHash": "sha256-GEhUuyQCN3pBeWuqoAxJ4oyoNoAdb/LQ5xR7fzawTPQ=",
+        "lastModified": 1623019164,
+        "narHash": "sha256-KWDwl88D5MNOUN49put5ZMeTQu9/SBw4hRrjC+aVtZo=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "b5d603a876fe8c89e96a9cac2dac2dd375479dac",
+        "rev": "37ed50f28f8350de8dc70b56d8ac198aac9b1178",
         "type": "github"
       },
       "original": {
@@ -528,17 +528,17 @@
     "tree-sitter-javascript": {
       "flake": false,
       "locked": {
-        "lastModified": 1620751892,
-        "narHash": "sha256-6MSgw5UF2GCId0Za60iNTebtqqIOIrBADNpcT3ishtc=",
+        "lastModified": 1622778095,
+        "narHash": "sha256-dXrDYozajXXqNCkOeSHU0mQseAYfaqpmvOn4+u0dNtE=",
         "owner": "tree-sitter",
         "repo": "tree-sitter-javascript",
-        "rev": "6c8cfae935f67dd9e3a33982e5e06be0ece6399a",
+        "rev": "d8df25843c209d26681c0628e678ac3660f67523",
         "type": "github"
       },
       "original": {
         "owner": "tree-sitter",
         "repo": "tree-sitter-javascript",
-        "rev": "6c8cfae935f67dd9e3a33982e5e06be0ece6399a",
+        "rev": "d8df25843c209d26681c0628e678ac3660f67523",
         "type": "github"
       }
     },
