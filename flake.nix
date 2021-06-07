@@ -17,7 +17,7 @@
     tree-sitter-go = { url = "github:tree-sitter/tree-sitter-go?rev=eb306e6e60f393df346cfc8cbfaf52667a37128a"; flake = false; };
     tree-sitter-gomod = { url = "github:camdencheek/tree-sitter-go-mod?rev=2dfd6b7d3a4cfedc52e5eaa3cc497f419e628ebb"; flake = false; };
     tree-sitter-html = { url = "github:tree-sitter/tree-sitter-html?rev=d93af487cc75120c89257195e6be46c999c6ba18"; flake = false; };
-    tree-sitter-javascript = { url = "github:tree-sitter/tree-sitter-javascript?rev=6c8cfae935f67dd9e3a33982e5e06be0ece6399a"; flake = false; };
+    tree-sitter-javascript = { url = "github:tree-sitter/tree-sitter-javascript?rev=d8df25843c209d26681c0628e678ac3660f67523"; flake = false; };
     tree-sitter-json = { url = "github:tree-sitter/tree-sitter-json?rev=65bceef69c3b0f24c0b19ce67d79f57c96e90fcb"; flake = false; };
     tree-sitter-latex = { url = "github:latex-lsp/tree-sitter-latex?rev=7f720661de5316c0f8fee956526d4002fa1086d8"; flake = false; };
     tree-sitter-lua = { url = "github:nvim-treesitter/tree-sitter-lua?rev=b6d4e9e10ccb7b3afb45018fbc391b4439306b23"; flake = false; };
