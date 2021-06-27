@@ -83,7 +83,7 @@ in
   tree-sitter-teal = [ "parser.c" "scanner.c" ];
   tree-sitter-toml = [ "parser.c" "scanner.c" ];
   tree-sitter-yaml = [ "parser.c" "scanner.cc" ];
-}) // 
+}) //
 (mapGenGrammars {
   tree-sitter-typescript = {
     parsers = [ "parser.c" "scanner.c" ];

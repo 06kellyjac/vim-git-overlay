@@ -3,14 +3,19 @@
 #!nix-shell -i "deno run --allow-read --allow-env --allow-run --unstable  --allow-net --allow-write" --packages deno nixFlakes git cacert gnused coreutils --pure
 */
 
-import { $, colors } from "https://deno.land/x/zx_deno/mod.mjs";
+import { $ } from "https://deno.land/x/deno_dx@0.2.0/mod.ts";
+import {
+  brightBlue,
+  brightGreen,
+  gray,
+} from "https://deno.land/std@0.99.0/fmt/colors.ts";
 
 // XY where
 // X is c for standard or b for bright and
 // Y is the colour
-const bGreen = (s: string) => colors.brightGreen(s);
-const bBlue = (s: string) => colors.brightBlue(s);
-const grey = (s: string) => colors.gray(s);
+const bGreen = (s: string) => brightGreen(s);
+const bBlue = (s: string) => brightBlue(s);
+const grey = (s: string) => gray(s);
 
 const arrAddFlag = (flag: string, arr: string[]): string =>
   arr.map((v) => `${flag} ${v}`).join(" ");

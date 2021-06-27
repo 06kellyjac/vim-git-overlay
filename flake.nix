@@ -5,6 +5,8 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
     flake-utils.url = "github:numtide/flake-utils";
+    nur.url = "github:nix-community/NUR";
+    nur.inputs.nixpkgs.follows = "nixpkgs";
     neovim.url = "github:neovim/neovim/nightly?dir=contrib";
     neovim.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -49,7 +51,7 @@
     which-key-nvim = { url = "github:folke/which-key.nvim"; flake = false; };
   };
 
-  outputs = { self, nixpkgs, neovim, flake-utils, flake-compat, ... }@inputs: {
+  outputs = { self, nixpkgs, nur, neovim, flake-utils, flake-compat, ... }@inputs: {
     overlay = final: prev:
       let
         pkgs = import nixpkgs { overlays = [ neovim.overlay ]; inherit (prev) system config; };
@@ -98,12 +100,6 @@
               telescope-media-files-nvim
               which-key-nvim;
           });
-      } //
-      flake-utils.lib.eachDefaultSystem (system:
-        let
-          pkgs = import nixpkgs { overlays = [ self.overlay neovim.overlay ]; inherit system; };
-        in
-        { defaultPackage = pkgs; }
-      );
+      };
   };
 }

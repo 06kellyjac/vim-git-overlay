@@ -27,7 +27,7 @@ jobs:
             experimental-features = nix-command flakes
 
       - name: Update flake lock file
-        run: ./update.ts
+        run: ./utils/update.ts
 
       - name: Create Pull Request
         id: cpr
