@@ -4,23 +4,43 @@ let
   inherit (pkgs) lib;
 
   makeGrammar =
-    { includedFiles ? null, parserName, src, version ? "latest", dir ? "src", doGenerate ? false, parentDir ? "", postUnpack ? null }:
+    let
+      genParserName = name: builtins.elemAt (builtins.split "tree-sitter-()" name) 2;
+    in
+    { name
+    , src
+    , includedFiles ? null
+    , parserName ? genParserName name
+    , version ? toVersion src.lastModifiedDate
+    , dir ? "src"
+    , doGenerate ? false
+    , parentDir ? ""
+    , postUnpack ? null
+    }:
+    let
+      noParser = (lib.findFirst (file: lib.hasPrefix "parser." file) false includedFiles) == false;
+    in
     pkgs.vimUtils.buildVimPluginFrom2Nix {
-      name = "nvim-treesitter-${parserName}";
-      inherit version src;
+      pname = "nvim-treesitter-${parserName}";
+      inherit version src postUnpack;
 
       nativeBuildInputs = with pkgs;
         [ gcc ] ++
+        # If there's no parser file included we need treesitter's parser.h file
+        lib.optional noParser [ tree-sitter ] ++
         lib.optional doGenerate [ tree-sitter nodejs-slim ];
-
-      postUnpack = postUnpack;
 
       preBuild = lib.optional doGenerate ''
         export TREE_SITTER_DIR="$TMPDIR"
+        # fix for issue below until pr below is released:
+        # https://github.com/tree-sitter/tree-sitter/issues/1222
+        # https://github.com/tree-sitter/tree-sitter/pull/1224
+        echo "{}" > "$TREE_SITTER_DIR/config.json"
         cd ${parentDir}
         tree-sitter generate
         cd -
       '';
+
       buildPhase = ''
         runHook preBuild
         mkdir -p parser/
@@ -29,37 +49,26 @@ let
       '';
     };
 
-  overridePkgVersionSrc = pkg: version: src: pkg.overrideAttrs (_: { inherit version src; });
-  createVimPlugin = pname: version: src: pkgs.vimUtils.buildVimPluginFrom2Nix { inherit pname version src; };
-  overrideOrCreateVimPlugin = name: src:
-    let
-      pkg = pkgs.vimPlugins.${name} or { };
-      version = toVersion src.lastModifiedDate;
-    in
-    if pkg ? overrideAttrs
-    then overridePkgVersionSrc pkg version src
-    else createVimPlugin name version src;
-  mapNightlyVimPlugins = pluginsSet: lib.mapAttrs'
-    (name: src: lib.nameValuePair name (overrideOrCreateVimPlugin name src))
-    pluginsSet;
-
   mapGrammars = grammarSet: lib.mapAttrs'
-    (name: parsers: lib.nameValuePair name (makeGrammar {
-      includedFiles = parsers;
-      parserName = builtins.elemAt (builtins.split "tree-sitter-()" name) 2;
-      src = inputs.${name};
-    }))
+    (name: parsers: lib.nameValuePair name (
+      makeGrammar {
+        inherit name;
+        src = inputs.${name};
+        includedFiles = parsers;
+      }
+    ))
     grammarSet;
 
   mapGenGrammars = grammarSet: lib.mapAttrs'
-    (name: grammarAttrs: lib.nameValuePair name (makeGrammar {
-      includedFiles = grammarAttrs.parsers;
-      parentDir = grammarAttrs.parentDir;
-      postUnpack = grammarAttrs.postUnpack;
-      doGenerate = true;
-      parserName = builtins.elemAt (builtins.split "tree-sitter-()" name) 2;
-      src = inputs.${name};
-    }))
+    (name: grammarAttrs: lib.nameValuePair name (
+      makeGrammar {
+        inherit name;
+        src = inputs.${name};
+        includedFiles = grammarAttrs.parsers;
+        doGenerate = true;
+        inherit (grammarAttrs) parentDir postUnpack;
+      }
+    ))
     grammarSet;
 in
 (mapGrammars {
@@ -80,7 +89,7 @@ in
   tree-sitter-python = [ "parser.c" "scanner.cc" ];
   tree-sitter-query = [ "parser.c" ];
   tree-sitter-rust = [ "parser.c" "scanner.c" ];
-  tree-sitter-teal = [ "parser.c" "scanner.c" ];
+  tree-sitter-teal = [ "scanner.c" ];
   tree-sitter-toml = [ "parser.c" "scanner.c" ];
   tree-sitter-yaml = [ "parser.c" "scanner.cc" ];
 }) //
