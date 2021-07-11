@@ -55,19 +55,20 @@ rec {
     telescope-media-files-nvim
     which-key-nvim
 
-    tree-sitter-go
     tree-sitter-bash
     tree-sitter-bibtex
     tree-sitter-c
     tree-sitter-comment
     tree-sitter-css
     tree-sitter-dockerfile
+    tree-sitter-go
     tree-sitter-gomod
     tree-sitter-html
     tree-sitter-javascript
     tree-sitter-json
     tree-sitter-latex
     tree-sitter-lua
+    tree-sitter-nix
     tree-sitter-python
     tree-sitter-query
     tree-sitter-rust
