@@ -20,7 +20,7 @@
     tree-sitter-go = { url = "github:tree-sitter/tree-sitter-go?rev=eb306e6e60f393df346cfc8cbfaf52667a37128a"; flake = false; };
     tree-sitter-gomod = { url = "github:camdencheek/tree-sitter-go-mod?rev=2dfd6b7d3a4cfedc52e5eaa3cc497f419e628ebb"; flake = false; };
     tree-sitter-html = { url = "github:tree-sitter/tree-sitter-html?rev=d93af487cc75120c89257195e6be46c999c6ba18"; flake = false; };
-    tree-sitter-javascript = { url = "github:tree-sitter/tree-sitter-javascript?rev=ae9bc67be79de1c46e97ac0d2c6dba01f6a3a963"; flake = false; };
+    tree-sitter-javascript = { url = "github:tree-sitter/tree-sitter-javascript?rev=2c5b138ea488259dbf11a34595042eb261965259"; flake = false; };
     tree-sitter-json = { url = "github:tree-sitter/tree-sitter-json?rev=65bceef69c3b0f24c0b19ce67d79f57c96e90fcb"; flake = false; };
     tree-sitter-latex = { url = "github:latex-lsp/tree-sitter-latex?rev=7f720661de5316c0f8fee956526d4002fa1086d8"; flake = false; };
     tree-sitter-lua = { url = "github:nvim-treesitter/tree-sitter-lua?rev=b6d4e9e10ccb7b3afb45018fbc391b4439306b23"; flake = false; };
@@ -28,10 +28,10 @@
     tree-sitter-python = { url = "github:tree-sitter/tree-sitter-python?rev=d6210ceab11e8d812d4ab59c07c81458ec6e5184"; flake = false; };
     tree-sitter-query = { url = "github:nvim-treesitter/tree-sitter-query?rev=bc753fa4d8349bd6280f634f57bd6e7be9a3ed17"; flake = false; };
     tree-sitter-rust = { url = "github:tree-sitter/tree-sitter-rust?rev=a360da0a29a19c281d08295a35ecd0544d2da211"; flake = false; };
-    tree-sitter-teal = { url = "github:euclidianAce/tree-sitter-teal?rev=66563e1016580a9e2802861c18c0402fa3f19ed1"; flake = false; };
+    tree-sitter-teal = { url = "github:euclidianAce/tree-sitter-teal?rev=85d8a3b1e23f74495d1125c441d33af5f28c9dea"; flake = false; };
     tree-sitter-toml = { url = "github:ikatyang/tree-sitter-toml?rev=8bd2056818b21860e3d756b5a58c4f6e05fb744e"; flake = false; };
-    tree-sitter-typescript = { url = "github:tree-sitter/tree-sitter-typescript?rev=28e757a2f498486931b3cb13a100a1bcc9261456"; flake = false; };
-    tree-sitter-tsx = { url = "github:tree-sitter/tree-sitter-typescript?rev=28e757a2f498486931b3cb13a100a1bcc9261456"; flake = false; };
+    tree-sitter-typescript = { url = "github:tree-sitter/tree-sitter-typescript?rev=a7eda67f56629e6ad9eb2eae21b78de80613c2aa"; flake = false; };
+    tree-sitter-tsx = { url = "github:tree-sitter/tree-sitter-typescript?rev=a7eda67f56629e6ad9eb2eae21b78de80613c2aa"; flake = false; };
     tree-sitter-yaml = { url = "github:ikatyang/tree-sitter-yaml?rev=0e36bed171768908f331ff7dff9d956bae016efb"; flake = false; };
 
     barbar-nvim = { url = "github:romgrk/barbar.nvim"; flake = false; };
@@ -81,7 +81,7 @@
         neovim-nightly = pkgs.neovim;
         vimPlugins =
           prev.vimPlugins //
-          (prev.callPackage ./tree-sitter.nix { inherit inputs toVersion; pkgs = prev; }) //
+          (prev.callPackage ./tree-sitter.nix { inherit inputs toVersion pkgs; }) //
           (mapNightlyVimPlugins {
             inherit (inputs)
               barbar-nvim
