@@ -19,7 +19,7 @@
     tree-sitter-dockerfile = { url = "github:camdencheek/tree-sitter-dockerfile?rev=e10833bfee4a4f348a48c3f735bb3a2b04f6da0f"; flake = false; };
     tree-sitter-go = { url = "github:tree-sitter/tree-sitter-go?rev=eb306e6e60f393df346cfc8cbfaf52667a37128a"; flake = false; };
     tree-sitter-gomod = { url = "github:camdencheek/tree-sitter-go-mod?rev=2dfd6b7d3a4cfedc52e5eaa3cc497f419e628ebb"; flake = false; };
-    tree-sitter-html = { url = "github:tree-sitter/tree-sitter-html?rev=d93af487cc75120c89257195e6be46c999c6ba18"; flake = false; };
+    tree-sitter-html = { url = "github:tree-sitter/tree-sitter-html?rev=af9339f3deb131ab99acfac906713b81dbcc41c9"; flake = false; };
     tree-sitter-javascript = { url = "github:tree-sitter/tree-sitter-javascript?rev=2c5b138ea488259dbf11a34595042eb261965259"; flake = false; };
     tree-sitter-json = { url = "github:tree-sitter/tree-sitter-json?rev=65bceef69c3b0f24c0b19ce67d79f57c96e90fcb"; flake = false; };
     tree-sitter-latex = { url = "github:latex-lsp/tree-sitter-latex?rev=7f720661de5316c0f8fee956526d4002fa1086d8"; flake = false; };
@@ -30,8 +30,8 @@
     tree-sitter-rust = { url = "github:tree-sitter/tree-sitter-rust?rev=a360da0a29a19c281d08295a35ecd0544d2da211"; flake = false; };
     tree-sitter-teal = { url = "github:euclidianAce/tree-sitter-teal?rev=85d8a3b1e23f74495d1125c441d33af5f28c9dea"; flake = false; };
     tree-sitter-toml = { url = "github:ikatyang/tree-sitter-toml?rev=8bd2056818b21860e3d756b5a58c4f6e05fb744e"; flake = false; };
-    tree-sitter-typescript = { url = "github:tree-sitter/tree-sitter-typescript?rev=a7eda67f56629e6ad9eb2eae21b78de80613c2aa"; flake = false; };
-    tree-sitter-tsx = { url = "github:tree-sitter/tree-sitter-typescript?rev=a7eda67f56629e6ad9eb2eae21b78de80613c2aa"; flake = false; };
+    tree-sitter-typescript = { url = "github:tree-sitter/tree-sitter-typescript?rev=30e1b08a43347885b35ea65891163e2851420154"; flake = false; };
+    tree-sitter-tsx = { url = "github:tree-sitter/tree-sitter-typescript?rev=30e1b08a43347885b35ea65891163e2851420154"; flake = false; };
     tree-sitter-yaml = { url = "github:ikatyang/tree-sitter-yaml?rev=0e36bed171768908f331ff7dff9d956bae016efb"; flake = false; };
 
     barbar-nvim = { url = "github:romgrk/barbar.nvim"; flake = false; };
