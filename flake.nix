@@ -22,7 +22,7 @@
     tree-sitter-html = { url = "github:tree-sitter/tree-sitter-html?rev=af9339f3deb131ab99acfac906713b81dbcc41c9"; flake = false; };
     tree-sitter-javascript = { url = "github:tree-sitter/tree-sitter-javascript?rev=2c5b138ea488259dbf11a34595042eb261965259"; flake = false; };
     tree-sitter-json = { url = "github:tree-sitter/tree-sitter-json?rev=65bceef69c3b0f24c0b19ce67d79f57c96e90fcb"; flake = false; };
-    tree-sitter-latex = { url = "github:latex-lsp/tree-sitter-latex?rev=5413eabe2ae7ff073f9b8b2b29e9aed363c9afe1"; flake = false; };
+    tree-sitter-latex = { url = "github:latex-lsp/tree-sitter-latex?rev=2c0d03a36ee979bc697f6a9dd119174cf0ef15e0"; flake = false; };
     tree-sitter-lua = { url = "github:nvim-treesitter/tree-sitter-lua?rev=b6d4e9e10ccb7b3afb45018fbc391b4439306b23"; flake = false; };
     tree-sitter-nix = { url = "github:cstrahan/tree-sitter-nix?rev=50f38ceab667f9d482640edfee803d74f4edeba5"; flake = false; };
     tree-sitter-python = { url = "github:tree-sitter/tree-sitter-python?rev=d6210ceab11e8d812d4ab59c07c81458ec6e5184"; flake = false; };
