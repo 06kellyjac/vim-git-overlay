@@ -14,7 +14,7 @@
     tree-sitter-bash = { url = "github:tree-sitter/tree-sitter-bash?rev=7776f24dfa35826fd3038c54a9c311b9e263c22c"; flake = false; };
     tree-sitter-bibtex = { url = "github:latex-lsp/tree-sitter-bibtex?rev=ccfd77db0ed799b6c22c214fe9d2937f47bc8b34"; flake = false; };
     tree-sitter-c = { url = "github:tree-sitter/tree-sitter-c?rev=008008e30a81849fca0c79291e2b480855e0e02c"; flake = false; };
-    tree-sitter-comment = { url = "github:stsewd/tree-sitter-comment?rev=9e6a10c4596949a780102d98a27835baa2dffeb4"; flake = false; };
+    tree-sitter-comment = { url = "github:stsewd/tree-sitter-comment?rev=374529d5e93ac8cda0537b8ad0db99f25db4e954"; flake = false; };
     tree-sitter-css = { url = "github:tree-sitter/tree-sitter-css?rev=94e10230939e702b4fa3fa2cb5c3bc7173b95d07"; flake = false; };
     tree-sitter-dockerfile = { url = "github:camdencheek/tree-sitter-dockerfile?rev=e10833bfee4a4f348a48c3f735bb3a2b04f6da0f"; flake = false; };
     tree-sitter-go = { url = "github:tree-sitter/tree-sitter-go?rev=eb306e6e60f393df346cfc8cbfaf52667a37128a"; flake = false; };
