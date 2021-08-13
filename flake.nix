@@ -34,8 +34,10 @@
     tree-sitter-tsx = { url = "github:tree-sitter/tree-sitter-typescript?rev=d598c96714a2dc9e346589c63369aff6719a51e6"; flake = false; };
     tree-sitter-yaml = { url = "github:ikatyang/tree-sitter-yaml?rev=0e36bed171768908f331ff7dff9d956bae016efb"; flake = false; };
 
+    astronauta-nvim = { url = "github:tjdevries/astronauta.nvim"; flake = false; };
     barbar-nvim = { url = "github:romgrk/barbar.nvim"; flake = false; };
     base16-vim = { url = "github:chriskempson/base16-vim"; flake = false; };
+    formatter-nvim = { url = "github:mhartington/formatter.nvim"; flake = false; };
     galaxyline-nvim = { url = "github:glepnir/galaxyline.nvim"; flake = false; };
     lspsaga-nvim = { url = "github:glepnir/lspsaga.nvim"; flake = false; };
     nvcode-color-schemes-vim = { url = "github:ChristianChiarulli/nvcode-color-schemes.vim"; flake = false; };
@@ -45,7 +47,7 @@
     nvim-tree-lua = { url = "github:kyazdani42/nvim-tree.lua"; flake = false; };
     nvim-treesitter = { url = "github:nvim-treesitter/nvim-treesitter"; flake = false; };
     nvim-web-devicons = { url = "github:kyazdani42/nvim-web-devicons"; flake = false; };
-    plenary-nvim = { url = "github:nvim-lua/plenary.nvim"; flake = false; };
+    plenary-nvim = { url = "github:nvim-lua/plenary.nvim?rev=80c9e00a6d7632fdebd959a18452604b862a6ebf"; flake = false; };
     popup-nvim = { url = "github:nvim-lua/popup.nvim"; flake = false; };
     telescope-frecency-nvim = { url = "github:nvim-telescope/telescope-frecency.nvim"; flake = false; };
     telescope-media-files-nvim = { url = "github:nvim-telescope/telescope-media-files.nvim"; flake = false; };
@@ -84,8 +86,10 @@
           (prev.callPackage ./tree-sitter.nix { inherit inputs toVersion pkgs; }) //
           (mapNightlyVimPlugins {
             inherit (inputs)
+              astronauta-nvim
               barbar-nvim
               base16-vim
+              formatter-nvim
               galaxyline-nvim
               lspsaga-nvim
               nvcode-color-schemes-vim
