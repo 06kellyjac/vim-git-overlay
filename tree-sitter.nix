@@ -94,20 +94,20 @@ in
   tree-sitter-yaml = [ "parser.c" "scanner.cc" ];
 }) //
 (mapGenGrammars {
-  tree-sitter-typescript = {
-    parsers = [ "parser.c" "scanner.c" ];
-    parentDir = "typescript/";
-    postUnpack = ''
-      mkdir node_modules
-      cp -r ${inputs.tree-sitter-javascript} node_modules/tree-sitter-javascript
-    '';
-  };
-  tree-sitter-tsx = {
-    parsers = [ "parser.c" "scanner.c" ];
-    parentDir = "tsx/";
-    postUnpack = ''
-      mkdir node_modules
-      cp -r ${inputs.tree-sitter-javascript} node_modules/tree-sitter-javascript
-    '';
-  };
+  # tree-sitter-typescript = {
+  #   parsers = [ "parser.c" "scanner.c" ];
+  #   parentDir = "typescript/";
+  #   postUnpack = ''
+  #     mkdir node_modules
+  #     cp -r ${inputs.tree-sitter-javascript} node_modules/tree-sitter-javascript
+  #   '';
+  # };
+  # tree-sitter-tsx = {
+  #   parsers = [ "parser.c" "scanner.c" ];
+  #   parentDir = "tsx/";
+  #   postUnpack = ''
+  #     mkdir node_modules
+  #     cp -r ${inputs.tree-sitter-javascript} node_modules/tree-sitter-javascript
+  #   '';
+  # };
 })

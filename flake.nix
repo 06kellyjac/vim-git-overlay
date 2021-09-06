@@ -20,7 +20,7 @@
     tree-sitter-go = { url = "github:tree-sitter/tree-sitter-go?rev=42b1e657c3a394c01df51dd3eadc8b214274a73c"; flake = false; };
     tree-sitter-gomod = { url = "github:camdencheek/tree-sitter-go-mod?rev=2dfd6b7d3a4cfedc52e5eaa3cc497f419e628ebb"; flake = false; };
     tree-sitter-html = { url = "github:tree-sitter/tree-sitter-html?rev=161a92474a7bb2e9e830e48e76426f38299d99d1"; flake = false; };
-    tree-sitter-javascript = { url = "github:tree-sitter/tree-sitter-javascript?rev=8dfe22e8e590a53ee855374153333f71cd7bd509"; flake = false; };
+    tree-sitter-javascript = { url = "github:tree-sitter/tree-sitter-javascript?rev=2cc5803225a307308005930b3bedb939b1543722"; flake = false; };
     tree-sitter-json = { url = "github:tree-sitter/tree-sitter-json?rev=203e239408d642be83edde8988d6e7b20a19f0e8"; flake = false; };
     tree-sitter-latex = { url = "github:latex-lsp/tree-sitter-latex?rev=2c0d03a36ee979bc697f6a9dd119174cf0ef15e0"; flake = false; };
     tree-sitter-lua = { url = "github:nvim-treesitter/tree-sitter-lua?rev=6f5d40190ec8a0aa8c8410699353d820f4f7d7a6"; flake = false; };
@@ -47,7 +47,7 @@
     nvim-tree-lua = { url = "github:kyazdani42/nvim-tree.lua"; flake = false; };
     nvim-treesitter = { url = "github:nvim-treesitter/nvim-treesitter"; flake = false; };
     nvim-web-devicons = { url = "github:kyazdani42/nvim-web-devicons"; flake = false; };
-    plenary-nvim = { url = "github:nvim-lua/plenary.nvim?rev=80c9e00a6d7632fdebd959a18452604b862a6ebf"; flake = false; };
+    plenary-nvim = { url = "github:nvim-lua/plenary.nvim"; flake = false; };
     popup-nvim = { url = "github:nvim-lua/popup.nvim"; flake = false; };
     telescope-frecency-nvim = { url = "github:nvim-telescope/telescope-frecency.nvim"; flake = false; };
     telescope-media-files-nvim = { url = "github:nvim-telescope/telescope-media-files.nvim"; flake = false; };
@@ -55,19 +55,17 @@
   };
 
   outputs = { self, nixpkgs, nur, neovim, flake-utils, flake-compat, ... }@inputs: {
-    overlay = final: prev:
+    mkVimPlugins = pkgs:
       let
-        pkgs = import nixpkgs { overlays = [ neovim.overlay ]; inherit (prev) system config; };
-
-        inherit (prev) lib;
+        inherit (pkgs) lib;
         toVersion = str: with lib; "${substring 0 4 str}-${substring 4 2 str}-${substring 6 2 str}";
 
         overridePkgVersionSrc = pkg: version: src: pkg.overrideAttrs (_: { inherit version src; });
-        createVimPlugin = pname: version: src: prev.vimUtils.buildVimPluginFrom2Nix { inherit pname version src; };
+        createVimPlugin = pname: version: src: pkgs.vimUtils.buildVimPluginFrom2Nix { inherit pname version src; };
 
         overrideOrCreateVimPlugin = name: src:
           let
-            pkg = prev.vimPlugins.${name} or { };
+            pkg = pkgs.vimPlugins.${name} or { };
             version = toVersion src.lastModifiedDate;
           in
           if pkg ? overrideAttrs
@@ -78,33 +76,46 @@
           (name: src: lib.nameValuePair name (overrideOrCreateVimPlugin name src))
           pluginsSet;
       in
+      (pkgs.callPackage ./tree-sitter.nix { inherit inputs toVersion pkgs; }) //
+        (mapNightlyVimPlugins {
+          inherit (inputs)
+            astronauta-nvim
+            barbar-nvim
+            base16-vim
+            formatter-nvim
+            galaxyline-nvim
+            lspsaga-nvim
+            nvcode-color-schemes-vim
+            nvim-colorizer-lua
+            nvim-compe
+            nvim-lspconfig
+            nvim-tree-lua
+            nvim-treesitter
+            nvim-web-devicons
+            plenary-nvim
+            popup-nvim
+            # telescope-frecency-nvim
+            # telescope-media-files-nvim
+            which-key-nvim;
+        });
+    overlay = final: prev:
+      let
+        pkgs = import nixpkgs { overlays = [ neovim.overlay ]; inherit (prev) system config; };
+      in
       {
         neovim = pkgs.neovim;
         neovim-nightly = pkgs.neovim;
-        vimPlugins =
-          prev.vimPlugins //
-          (prev.callPackage ./tree-sitter.nix { inherit inputs toVersion pkgs; }) //
-          (mapNightlyVimPlugins {
-            inherit (inputs)
-              astronauta-nvim
-              barbar-nvim
-              base16-vim
-              formatter-nvim
-              galaxyline-nvim
-              lspsaga-nvim
-              nvcode-color-schemes-vim
-              nvim-colorizer-lua
-              nvim-compe
-              nvim-lspconfig
-              nvim-tree-lua
-              nvim-treesitter
-              nvim-web-devicons
-              plenary-nvim
-              popup-nvim
-              telescope-frecency-nvim
-              telescope-media-files-nvim
-              which-key-nvim;
-          });
+        vimPlugins = prev.vimPlugins // self.mkVimPlugins prev;
       };
-  };
+  } // flake-utils.lib.eachDefaultSystem (system:
+    let pkgs = import nixpkgs { inherit system; overlays = [ self.overlay ]; }; in
+    {
+      packages = flake-utils.lib.flattenTree {
+        all-modified = pkgs.buildEnv {
+          name = "all-modified";
+          paths = (pkgs.callPackage ./flake-ci.nix { mkVimPlugins = self.mkVimPlugins; }).buildOutputs;
+        };
+      };
+    }
+  );
 }
