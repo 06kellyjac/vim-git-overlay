@@ -13,11 +13,11 @@
 
     tree-sitter-bash = { url = "github:tree-sitter/tree-sitter-bash?rev=7776f24dfa35826fd3038c54a9c311b9e263c22c"; flake = false; };
     tree-sitter-bibtex = { url = "github:latex-lsp/tree-sitter-bibtex?rev=ccfd77db0ed799b6c22c214fe9d2937f47bc8b34"; flake = false; };
-    tree-sitter-c = { url = "github:tree-sitter/tree-sitter-c?rev=e348e8ec5efd3aac020020e4af53d2ff18f393a9"; flake = false; };
+    tree-sitter-c = { url = "github:tree-sitter/tree-sitter-c?rev=3ced8d6cd212a6f576cd4ef3d533bcb9c09eface"; flake = false; };
     tree-sitter-comment = { url = "github:stsewd/tree-sitter-comment?rev=8d480c0a86e3b95812252d29292b2686eb92418d"; flake = false; };
     tree-sitter-css = { url = "github:tree-sitter/tree-sitter-css?rev=a03f1d2d1dfbf6f8e0fdca5f9ff030228241eb57"; flake = false; };
     tree-sitter-dockerfile = { url = "github:camdencheek/tree-sitter-dockerfile?rev=f0b8e6748238ac0a6ba10e360db5b712039db895"; flake = false; };
-    tree-sitter-go = { url = "github:tree-sitter/tree-sitter-go?rev=42b1e657c3a394c01df51dd3eadc8b214274a73c"; flake = false; };
+    tree-sitter-go = { url = "github:tree-sitter/tree-sitter-go?rev=aeb2f33b366fd78d5789ff104956ce23508b85db"; flake = false; };
     tree-sitter-gomod = { url = "github:camdencheek/tree-sitter-go-mod?rev=2dfd6b7d3a4cfedc52e5eaa3cc497f419e628ebb"; flake = false; };
     tree-sitter-html = { url = "github:tree-sitter/tree-sitter-html?rev=161a92474a7bb2e9e830e48e76426f38299d99d1"; flake = false; };
     tree-sitter-javascript = { url = "github:tree-sitter/tree-sitter-javascript?rev=fdeb68ac8d2bd5a78b943528bb68ceda3aade2eb"; flake = false; };
@@ -27,7 +27,7 @@
     tree-sitter-nix = { url = "github:cstrahan/tree-sitter-nix?rev=6b71a810c0acd49b980c50fc79092561f7cee307"; flake = false; };
     tree-sitter-python = { url = "github:tree-sitter/tree-sitter-python?rev=78c4e9b6b2f08e1be23b541ffced47b15e2972ad"; flake = false; };
     tree-sitter-query = { url = "github:nvim-treesitter/tree-sitter-query?rev=5217c6805c09f8fc00ed13d17d5fcb791437aee6"; flake = false; };
-    tree-sitter-rust = { url = "github:tree-sitter/tree-sitter-rust?rev=afed2747665042e0000cf67213d5a5e8a84c7bcc"; flake = false; };
+    tree-sitter-rust = { url = "github:tree-sitter/tree-sitter-rust?rev=36ae187ed6dd3803a8a89dbb54f3124c8ee74662"; flake = false; };
     tree-sitter-teal = { url = "github:euclidianAce/tree-sitter-teal?rev=fcc5f6f4d194dede4e676834ff28a506e39e17b4"; flake = false; };
     tree-sitter-toml = { url = "github:ikatyang/tree-sitter-toml?rev=8bd2056818b21860e3d756b5a58c4f6e05fb744e"; flake = false; };
     tree-sitter-typescript = { url = "github:tree-sitter/tree-sitter-typescript?rev=8e9dba7bd7cf089838a036a98be94db53ba2d0a9"; flake = false; };
