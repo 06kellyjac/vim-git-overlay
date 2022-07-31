@@ -13,7 +13,7 @@
 
     tree-sitter-bash = { url = "github:tree-sitter/tree-sitter-bash?rev=275effdfc0edce774acf7d481f9ea195c6c403cd"; flake = false; };
     tree-sitter-bibtex = { url = "github:latex-lsp/tree-sitter-bibtex?rev=ccfd77db0ed799b6c22c214fe9d2937f47bc8b34"; flake = false; };
-    tree-sitter-c = { url = "github:tree-sitter/tree-sitter-c?rev=3ced8d6cd212a6f576cd4ef3d533bcb9c09eface"; flake = false; };
+    tree-sitter-c = { url = "github:tree-sitter/tree-sitter-c?rev=0720f9c2af2a97dcd0e9ed90324d1baba68b2849"; flake = false; };
     tree-sitter-comment = { url = "github:stsewd/tree-sitter-comment?rev=a37ca370310ac6f89b6e0ebf2b86b2219780494e"; flake = false; };
     tree-sitter-css = { url = "github:tree-sitter/tree-sitter-css?rev=a03f1d2d1dfbf6f8e0fdca5f9ff030228241eb57"; flake = false; };
     tree-sitter-dockerfile = { url = "github:camdencheek/tree-sitter-dockerfile?rev=25c71d6a24cdba8f0c74ef40d4d2d93defd7e196"; flake = false; };
@@ -30,8 +30,8 @@
     tree-sitter-rust = { url = "github:tree-sitter/tree-sitter-rust?rev=36ae187ed6dd3803a8a89dbb54f3124c8ee74662"; flake = false; };
     tree-sitter-teal = { url = "github:euclidianAce/tree-sitter-teal?rev=fcc5f6f4d194dede4e676834ff28a506e39e17b4"; flake = false; };
     tree-sitter-toml = { url = "github:ikatyang/tree-sitter-toml?rev=8bd2056818b21860e3d756b5a58c4f6e05fb744e"; flake = false; };
-    tree-sitter-typescript = { url = "github:tree-sitter/tree-sitter-typescript?rev=1b3ba31c7538825b05815f4f5bffcca6394edc63"; flake = false; };
-    tree-sitter-tsx = { url = "github:tree-sitter/tree-sitter-typescript?rev=1b3ba31c7538825b05815f4f5bffcca6394edc63"; flake = false; };
+    tree-sitter-typescript = { url = "github:tree-sitter/tree-sitter-typescript?rev=49e82b1bce36d6046df911901684cd66b5345d58"; flake = false; };
+    tree-sitter-tsx = { url = "github:tree-sitter/tree-sitter-typescript?rev=49e82b1bce36d6046df911901684cd66b5345d58"; flake = false; };
     tree-sitter-yaml = { url = "github:ikatyang/tree-sitter-yaml?rev=0e36bed171768908f331ff7dff9d956bae016efb"; flake = false; };
 
     astronauta-nvim = { url = "github:tjdevries/astronauta.nvim"; flake = false; };
